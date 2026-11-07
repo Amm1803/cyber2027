@@ -101,8 +101,7 @@ for length in lengths:
         shift = random.randint(1, 25)
         encrypted_text = encrypt_caesar(original_text, shift)
         
-        decrypted_text = break_caesar(encrypted_text)
-        
+        found_shift, decrypted_text = break_caesar(encrypted_text)        
         if decrypted_text.lower() == original_text.lower():
             success_count += 1
             
